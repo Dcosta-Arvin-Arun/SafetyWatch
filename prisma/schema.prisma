@@ -1,0 +1,47 @@
+// Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String   // Store hashed password
+  role      String   // "admin" or "user"
+  // Optionally, add displayName if needed
+  displayName String?
+  // Add relation to CrimeReport if needed
+  reports   CrimeReport[]
+}
+
+model CrimeReport {
+  id                String   @id @default(uuid())
+  title             String
+  description       String   @db.Text
+  crimeType         String
+  location          String
+  geoPoint          Json
+  images            Json?
+  status            String   @default("pending")
+  isAnonymous       Boolean  @default(false)
+  reporterId        String?
+  reporterName      String?
+  reporterContact   String?
+  actionDetails     String?  @db.Text
+  trackingId        String   @unique @db.Char(16) // 16-char hex code, not UUID
+  incidentDate      String   // e.g. "2025-05-26"
+  incidentTime      String   // e.g. "14:30"
+  incidentDateTime  DateTime
+  userId            String?
+  user              User?    @relation(fields: [userId], references: [id])
+  updatedAt         DateTime @updatedAt
+}
