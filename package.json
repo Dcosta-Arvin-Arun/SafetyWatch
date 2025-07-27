@@ -2,7 +2,7 @@
   "name": "crimewebsitereport",
   "version": "0.1.0",
   "private": true,
-  "author": "Pearl Arun Dcosta",
+  "author": "Arvin Arun Dcosta",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

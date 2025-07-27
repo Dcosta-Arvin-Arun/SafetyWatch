@@ -296,7 +296,7 @@ export function Footer() {
       >
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-0">
           <span>© {new Date().getFullYear()} SafetyWatch. All rights reserved.</span>
-          <span className="md:ml-2">By Pearl Arun Dcosta</span>
+          <span className="md:ml-2">By Arvin Arun Dcosta</span>
         </div>
       </motion.div>
     </footer>
