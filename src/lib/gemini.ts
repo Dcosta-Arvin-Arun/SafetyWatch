@@ -8,7 +8,7 @@ import {
   InlineDataPart,
 } from "@google/generative-ai";
 
-const API_KEY = "AIzaSyAujTXEikSfbt7HpKUy6iypWepPvWJXUgE"; // Your API key
+const API_KEY = "AIzaSyACDL2fEU7ZMWcJKQsfz5EmfZzs8LPO0eQ"; // Your API key
 const MODEL_NAME = "gemini-1.5-flash-latest";
 
 const genAI = new GoogleGenerativeAI(API_KEY);
