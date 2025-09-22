@@ -1,5 +1,10 @@
 # Live link: https://safety-watch-eta.vercel.app/
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
+
 # SafetyWatch
 
 SafetyWatch is a modern, full-stack web application for reporting, tracking, and analyzing crime incidents in your community. It features real-time reporting, admin and user dashboards, interactive crime maps, and robust statistics, all with a focus on speed, security, and usability.
